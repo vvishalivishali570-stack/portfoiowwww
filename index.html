@@ -341,6 +341,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .contact-form textarea{resize:vertical;min-height:120px;}
   .contact-form button{align-self:flex-start;margin-top:4px;border:none;cursor:pointer;font-family:inherit;}
   .form-note{font-size:13px;color:var(--ink-muted);margin-top:-4px;}
+.contact-form .form-title{font-size:24px;line-height:1.2;margin:0;}
+.contact-form .form-req{font-size:13px;color:var(--ink-muted);margin:-8px 0 0;}
+.contact-form .form-req span,.contact-form label span{color:#d64545;}
+.contact-form .mc-field{display:flex;flex-direction:column;gap:6px;}
+.contact-form label{font-size:13.5px;font-weight:600;color:var(--ink);}
+.contact-form .name-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:560px){.contact-form .name-row{grid-template-columns:1fr;}}
 
   footer{padding:36px 0;border-top:1px solid var(--line);}
   .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
@@ -859,20 +866,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap contact-grid">
     <div class="contact-info reveal">
       <h2>Let's grow something digital.</h2>
-      <p>Have a project in mind, or just want to talk strategy? I'd like to hear about it.</p>
+      <p>Whether you have a project in mind or just want to talk strategy, I'd like to hear about it.</p>
+      <!-- Contact details hidden until real details are added. Replace the values below and delete the comment markers to show them.
       <ul class="contact-links">
         <li><span class="clabel">Email</span><a href="mailto:vishali@example.com">vishali@example.com</a></li>
         <li><span class="clabel">Phone</span><a href="tel:+91">Add your number</a></li>
         <li><span class="clabel">LinkedIn</span><a href="#">Add your LinkedIn URL</a></li>
         <li><span class="clabel">Instagram</span><a href="#">Add your Instagram URL</a></li>
       </ul>
+      -->
     </div>
-    <form class="contact-form reveal" onsubmit="event.preventDefault(); window.location.href='mailto:vishali@example.com?subject=' + encodeURIComponent('Portfolio enquiry from ' + this.name.value) + '&body=' + encodeURIComponent(this.message.value + '\n\nFrom: ' + this.name.value + ' (' + this.email.value + ')');">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Tell me about your project" required></textarea>
-      <button type="submit" class="btn-primary">Send message →</button>
-      <p class="form-note">Opens your email app with the message pre-filled — swap this for a form backend (e.g. Formspree) if you'd rather it send directly.</p>
+    <form class="contact-form reveal" action="https://github.us1.list-manage.com/subscribe/post?u=ff45ac3f0909a380c54dedd84&amp;id=8a604840a8&amp;f_id=000d77e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+      <h3 class="form-title">Subscribe</h3>
+      <p class="form-req"><span>*</span> indicates required</p>
+      <div class="mc-field">
+        <label for="mce-EMAIL">Email Address <span>*</span></label>
+        <input type="email" name="EMAIL" id="mce-EMAIL" required>
+      </div>
+      <div class="name-row">
+        <div class="mc-field">
+          <label for="mce-FNAME">First Name</label>
+          <input type="text" name="FNAME" id="mce-FNAME">
+        </div>
+        <div class="mc-field">
+          <label for="mce-LNAME">Last Name</label>
+          <input type="text" name="LNAME" id="mce-LNAME">
+        </div>
+      </div>
+      <div class="mc-field">
+        <label for="mce-PHONE">Phone Number</label>
+        <input type="tel" name="PHONE" id="mce-PHONE">
+      </div>
+      <div aria-hidden="true" style="position:absolute;left:-5000px;">
+        <input type="text" name="b_ff45ac3f0909a380c54dedd84_8a604840a8" tabindex="-1" value="">
+      </div>
+      <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn-primary">Subscribe →</button>
     </form>
   </div>
 </section>
